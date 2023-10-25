@@ -1,0 +1,53 @@
+focus_tree = {
+	id = Russia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PER
+		}
+	}
+	default = no
+    focus = {
+		id = to_elect_a_government
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.5
+		x = 1
+		y = 1
+		completion_reward = {
+ 
+        add_ideas = persia_obval
+
+
+
+		}
+	}
+    focus = {
+		id = to_elect_a_government
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.5
+		x = 3
+		y = 1
+		completion_reward = {
+ 
+            
+
+
+
+		}
+	}
+    focus = {
+		id = to_elect_a_government
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.5
+		x = 5
+		y = 1
+		completion_reward = {
+ 
+            
+
+
+
+		}
+	}
+}

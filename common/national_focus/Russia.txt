@@ -1,0 +1,448 @@
+focus_tree = {
+	id = Russia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	default = no
+	focus = {
+		id = to_elect_a_government
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.5
+		x = 8
+		y = 1
+		completion_reward = {
+						add_offsite_building = {
+								type = arms_factory
+								level = 1
+							}
+						add_tech_bonus = {
+								name = MAS_four_year_plan
+								bonus = 1.0
+								uses = 2
+								category = industry
+							}
+					}
+
+	}
+	focus = {
+		id = appeal_to_the_union_of_right_forces
+		icon = GFX_goal_generic_national_unity
+		cost = 0
+		prerequisite = {
+			focus = to_elect_a_government
+		}
+		mutually_exclusive = {
+			focus = request_help_from_the_left
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = request_help_from_the_left
+		icon = GFX_goal_generic_major_alliance
+		cost = 0
+		prerequisite = {
+			focus = to_elect_a_government
+		}
+		mutually_exclusive = {
+			focus = appeal_to_the_union_of_right_forces
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = appeal_to_the_communists
+		icon = GFX_goal_tripartite_pact
+		cost = 0
+		prerequisite = {
+			focus = request_help_from_the_left
+		}
+		x = 15
+		y = 3
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = democracy
+		icon = GFX_goal_support_democracy
+		cost = 0
+		prerequisite = {
+			focus = appeal_to_the_communists
+		}
+		mutually_exclusive = {
+			focus = communism_is_on_the_rise
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = communism_is_on_the_rise
+		icon = GFX_goal_support_communism
+		cost = 0
+		prerequisite = {
+			focus = appeal_to_the_communists
+		}
+		mutually_exclusive = {
+			focus = democracy
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = the_power_of_the_proletarians
+		icon = GFX_goal_support_fourth_int
+		cost = 0
+		prerequisite = {
+			focus = communism_is_on_the_rise
+		}
+		x = 18
+		y = 5
+
+	}
+	focus = {
+		id = revive_the_chikists
+		icon = GFX_goal_generic_secret_weapon
+		cost = 0
+		prerequisite = {
+			focus = the_power_of_the_proletarians
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = soviet_science_is_the_best_in_the_world
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 0
+		prerequisite = {
+			focus = the_power_of_the_proletarians
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = building_socialism
+		icon = GFX_goal_generic_consumer_goods
+		cost = 0
+		prerequisite = {
+			focus = the_power_of_the_proletarians
+		}
+		x = 20
+		y = 6
+
+	}
+	focus = {
+		id = privatize_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 0
+		prerequisite = {
+			focus = building_socialism
+		}
+		x = 19
+		y = 7
+
+	}
+	focus = {
+		id = allocate_funds_from_the_budget
+		icon = GFX_goal_generic_position_armies
+		cost = 0
+		prerequisite = {
+			focus = privatize_factories
+		}
+		x = 20
+		y = 8
+
+	}
+	focus = {
+		id = impact_of_heavy_industry
+		icon = GFX_goal_generic_soviet_construction
+		cost = 0
+		prerequisite = {
+			focus = allocate_funds_from_the_budget
+		}
+		x = 20
+		y = 9
+
+	}
+	focus = {
+		id = the_first_fiveyear_plan
+		icon = GFX_goal_generic_construct_civilian
+		cost = 0
+		prerequisite = {
+			focus = impact_of_heavy_industry
+		}
+		x = 20
+		y = 10
+
+	}
+	focus = {
+		id = involvement_of_collective_farms
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 0
+		prerequisite = {
+			focus = building_socialism
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = the_process_of_collectivization
+		icon = GFX_goal_generic_military_sphere
+		cost = 0
+		prerequisite = {
+			focus = involvement_of_collective_farms
+		}
+		x = 22
+		y = 8
+
+	}
+	focus = {
+		id = workers_power
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 0
+		prerequisite = {
+			focus = the_process_of_collectivization
+		}
+		x = 22
+		y = 9
+
+	}
+	focus = {
+		id = global_integration
+		icon = GFX_goal_generic_territory_or_war
+		cost = 0
+		prerequisite = {
+			focus = workers_power
+		}
+		x = 22
+		y = 10
+
+	}
+	focus = {
+		id = the_socialist_state
+		icon = GFX_goal_generic_position_armies
+		cost = 0
+		prerequisite = {
+			focus = the_first_fiveyear_plan
+		}
+		prerequisite = {
+			focus = global_integration
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = patronize_schools
+		icon = GFX_goal_rhineland
+		cost = 0
+		prerequisite = {
+			focus = building_socialism
+		}
+		x = 23
+		y = 7
+
+	}
+	focus = {
+		id = trade_unions_in_the_government
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 0
+		prerequisite = {
+			focus = revive_the_chikists
+		}
+		x = 15
+		y = 7
+
+	}
+	focus = {
+		id = internationalism
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 0
+		prerequisite = {
+			focus = privatize_factories
+		}
+		prerequisite = {
+			focus = trade_unions_in_the_government
+		}
+		x = 17
+		y = 8
+
+	}
+	focus = {
+		id = root_out_the_rebels
+		icon = GFX_goal_generic_small_arms
+		cost = 0
+		prerequisite = {
+			focus = internationalism
+		}
+		x = 17
+		y = 9
+
+	}
+	focus = {
+		id = creation_of_the_red_army
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 0
+		prerequisite = {
+			focus = root_out_the_rebels
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
+		id = prepare_for_a_worldwide_revolution
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 0
+		prerequisite = {
+			focus = root_out_the_rebels
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = sow_the_seeds_of_revolution
+		icon = GFX_goal_generic_alliance
+		cost = 0
+		prerequisite = {
+			focus = creation_of_the_red_army
+		}
+		prerequisite = {
+			focus = prepare_for_a_worldwide_revolution
+		}
+		x = 14
+		y = 11
+
+	}
+	focus = {
+		id = red_brigades
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 0
+		prerequisite = {
+			focus = sow_the_seeds_of_revolution
+		}
+		prerequisite = {
+			focus = the_socialist_state
+		}
+		x = 17
+		y = 12
+
+	}
+	focus = {
+		id = liberation_of_workers
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 0
+		prerequisite = {
+			focus = sow_the_seeds_of_revolution
+		}
+		prerequisite = {
+			focus = the_socialist_state
+		}
+		x = 17
+		y = 13
+
+	}
+	focus = {
+		id =  the_fight_against_fascism
+		icon = GFX_goal_support_fascism
+		cost = 0
+		prerequisite = {
+			focus = liberation_of_workers
+		}
+		x = 14
+		y = 14
+
+	}
+	focus = {
+		id = the_fight_against_capitalism
+		icon = GFX_goal_support_democracy
+		cost = 0
+		prerequisite = {
+			focus = liberation_of_workers
+		}
+		x = 17
+		y = 14
+
+	}
+	focus = {
+		id = the_fight_against_the_monarchy
+		icon = GFX_goal_anschluss
+		cost = 0
+		prerequisite = {
+			focus = liberation_of_workers
+		}
+		x = 20
+		y = 14
+
+	}
+	focus = {
+		id = marxs_dream
+		icon = GFX_goal_generic_attack_allies
+		cost = 0
+		prerequisite = {
+			focus =  the_fight_against_fascism
+		}
+		prerequisite = {
+			focus = the_fight_against_the_monarchy
+		}
+		prerequisite = {
+			focus = the_fight_against_capitalism
+		}
+		x = 17
+		y = 16
+
+	}
+	focus = {
+		id = new_culture
+		icon = GFX_goal_generic_special_forces
+		cost = 0
+		prerequisite = {
+			focus = creation_of_the_red_army
+		}
+		x = 8
+		y = 11
+
+	}
+	focus = {
+		id = lessons_of_war
+		icon = GFX_goal_generic_propaganda
+		cost = 0
+		prerequisite = {
+			focus = creation_of_the_red_army
+		}
+		x = 11
+		y = 11
+
+	}
+	focus = {
+		id = palace_of_soviets
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 0
+		prerequisite = {
+			focus = global_integration
+			focus = patronize_schools
+		}
+		x = 24
+		y = 11
+
+	}
+}
